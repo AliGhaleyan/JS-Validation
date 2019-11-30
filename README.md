@@ -51,7 +51,7 @@ Validation.validate(data,rules);
 ```
 
 ## Rules :
-> **Note**  when use rules must be split with `|` like this, `'rule1rule2rule3...'`
+> **Note**  when use rules must be split with `|` like this, `'rule1|rule2|rule3...'`
 
 |title          | description				     |use                         |
 |---------------|--------------------------------|----------------------------|
