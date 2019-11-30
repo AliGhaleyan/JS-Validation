@@ -1,7 +1,7 @@
 # JS Validation!
 import in component 
 ``` javascript
-import Validation from './../libraries/validation/validation.js'
+import Validation from 'js-validation-serjik'
 ```
 
 ## single mode 
