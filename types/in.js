@@ -2,6 +2,7 @@ const in_values = class InValues {
     constructor() {
         this.errors = [];
         this.fails = false;
+        this.label = false;
     }
 
     check(value, ...array) {
@@ -10,11 +11,15 @@ const in_values = class InValues {
             array.map(item => {
                 str += ',' +  item;
             });
-            this.errors.push('باید یکی از مقادیر '+ str + ' باشد');
+            this.errors.push((this.label || '') + ' باید یکی از مقادیر '+ str + ' باشد');
             this.fails = true;
         }
 
         return this;
+    }
+
+    setLabel(label) {
+        this.label = label;
     }
 };
 

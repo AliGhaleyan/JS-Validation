@@ -1,12 +1,22 @@
 class Validation {
+    /**
+     * Validation construct
+     */
     constructor() {
         this.errors = {};
         this.fails = true;
+        this.options = {};
 
         if (Validation.types_classes === false)
             Validation.types_classes = require('./types.js').default;
     }
 
+    /**
+     * get and require file for type (rule) name
+     *
+     * @param name
+     * @returns {*}
+     */
     static getTypeClass(name = false) {
         let type = Validation.types_classes.find(item => item.name == name);
 
@@ -20,17 +30,35 @@ class Validation {
         }
     }
 
-    static validate(values, rules, single = false) {
+    /**
+     * make a object of Validation class then check validate type is single mode or no
+     *
+     * @param values
+     * @param rules
+     * @param labels
+     * @param single
+     * @returns {Validation}
+     */
+    static validate(values, rules, labels = false, single = false,) {
         let object = new Validation();
+
         if (single)
-            object.singleValidate(values, rules);
+            object.singleValidate(values, rules, labels);
         else
-            object.groupValidate(values, rules);
+            object.groupValidate(values, rules, labels);
 
         return object;
     }
 
-    singleValidate(value, rules) {
+    /**
+     * action single mode validation
+     *
+     * @param value
+     * @param rules
+     * @param label
+     * @returns {Validation}
+     */
+    singleValidate(value, rules, label = false) {
         if (!Array.isArray(rules))
             rules = Validation.fetchRulesOfString(rules);
 
@@ -42,6 +70,8 @@ class Validation {
             [rule, variables] = Validation.fetchVariablesOfRuleString(rules_array[i]);
 
             rule_object = new (Validation.getTypeClass(rule)['default'])();
+            if (label !== false)
+                rule_object.setLabel(label);
             result = rule_object.check(value, ...variables);
 
             if (result.hasOwnProperty('errors') && result.errors)
@@ -53,12 +83,21 @@ class Validation {
         return this;
     }
 
-    groupValidate(values, rules) {
+    /**
+     * action group mode validation
+     *
+     * @param values
+     * @param rules
+     * @param labels
+     * @returns {Validation}
+     */
+    groupValidate(values, rules, labels = false) {
         let result;
         for (let i in values) {
             let value = values[i];
             let rule = rules[i];
-            result = Validation.validate(value, rule, true);
+            let label = labels ? labels[i] : false;
+            result = Validation.validate(value, rule, label, true);
             this.errors[i] = result.errors.errors;
             if (result.fails)
                 this.fails = true;
@@ -66,12 +105,21 @@ class Validation {
         return this;
     }
 
-    groupValidateForVInput(vms, values, rules) {
+    /**
+     * action group mode validation for saved references
+     *
+     * @param vms
+     * @param values
+     * @param rules
+     * @param labels
+     * @returns {Validation}
+     */
+    groupValidateReferences(vms, values, rules, labels = {}) {
         let result;
         for (let i in values) {
             let value = values[i];
             let rule = rules[i];
-            result = Validation.validate(value, rule, true);
+            result = Validation.validate(value, labels[i], rule, true);
             let vm = vms[i];
             vm.$set(vm, 'localErrors', result.errors.errors);
             this.errors[i] = result.errors.errors;
@@ -81,10 +129,22 @@ class Validation {
         return this;
     }
 
+    /**
+     * split rules of '|'
+     *
+     * @param string
+     * @returns {*|{type, default}}
+     */
     static fetchRulesOfString(string) {
         return string.split('|');
     }
 
+    /**
+     * split variables of rule from string
+     *
+     * @param string
+     * @returns {[null,null]}
+     */
     static fetchVariablesOfRuleString(string) {
         let rule, variable = [], list;
         list = string.split(':');
@@ -97,6 +157,11 @@ class Validation {
         return [rule, variable];
     }
 
+    /**
+     * split variables of string
+     * @param string
+     * @returns {*}
+     */
     static fetchVariables(string) {
         let temp = string;
         if (!/^\[.*\]/.test(string)) {
@@ -118,24 +183,53 @@ class Validation {
         return temp;
     }
 
-    static save(name, data, rules) {
+    /**
+     * save data and rule for run after
+     *
+     * @param name
+     * @param data
+     * @param rules
+     * @param label
+     */
+    static save(name, data, rules, label) {
         Validation.saved_properties['values'][name] = data;
         Validation.saved_properties['rules'][name] = rules;
+        Validation.saved_properties['labels'][name] = label;
     }
 
-    static saveForVInput(vm, name, data, rules) {
+    /**
+     * save data and rule for run after in references mode
+     *
+     * @param vm
+     * @param name
+     * @param data
+     * @param rules
+     * @param label
+     */
+    static saveReference(vm, name, data, rules, label) {
         Validation.saved_properties['values'][name] = data;
         Validation.saved_properties['rules'][name] = rules;
+        Validation.saved_properties['labels'][name] = label;
         Validation.saved_properties['vms'][name] = vm;
     }
 
+    /**
+     * check validation for saved values and rules in normal mode
+     *
+     * @returns {Validation}
+     */
     static runSavedValidates() {
         return Validation.validate(Validation.saved_properties['values'], Validation.saved_properties['rules']);
     }
 
-    static runSavedForVInputValidate() {
+    /**
+     * check validation for saved values and rules in references mode
+     *
+     * @returns {Validation}
+     */
+    static runSavedReferences() {
         let object = new Validation();
-        return object.groupValidateForVInput(Validation.saved_properties['vms'], Validation.saved_properties['values'], Validation.saved_properties['rules']);
+        return object.groupValidateReferences(Validation.saved_properties['vms'], Validation.saved_properties['values'], Validation.saved_properties['rules'], Validation.saved_properties['labels']);
     }
 }
 
@@ -144,6 +238,7 @@ Validation.loaded_types = {};
 Validation.saved_properties = {
     values: {},
     rules : {},
+    labels: {},
     vms   : {},
 };
 
