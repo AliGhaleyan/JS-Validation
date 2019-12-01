@@ -9,6 +9,7 @@ const names = [
     {name: 'persian', route: 'persian_alpha'},
     {name: 'english', route: 'english_alpha'},
     {name: 'start_with'},
+    {name: 'phone'},
     // {name: 'rule name', route: 'file-name'}
 ];
 

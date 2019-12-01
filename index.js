@@ -5,7 +5,6 @@ class Validation {
     constructor() {
         this.errors = {};
         this.fails = false;
-        this.options = {};
 
         if (Validation.types_classes === false)
             Validation.types_classes = require('./types.js').default;
@@ -70,7 +69,7 @@ class Validation {
             [rule, variables] = Validation.fetchVariablesOfRuleString(rules_array[i]);
 
             rule_object = new (Validation.getTypeClass(rule)['default'])();
-            if (label !== false)
+            if (label !== false && rule_object.hasOwnProperty('setLabel') && typeof rule_object.setLabel === 'function')
                 rule_object.setLabel(label);
             result = rule_object.check(value, ...variables);
 
