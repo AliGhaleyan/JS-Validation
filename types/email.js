@@ -7,7 +7,7 @@ const email = class Email {
 
     check(value) {
         if (!/\S+@\S+\.\S+/.test(value)) {
-            this.errors.push((this.label || '') + " فرمت ایمیل نادرست است.");
+            this.errors.push(" فرمت ایمیل نادرست است.");
             this.fails = true;
         }
 
