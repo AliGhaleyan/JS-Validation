@@ -5,8 +5,8 @@ const setLabel = class Phone {
     }
 
     check(value) {
-        let phoneno = /^\(?([0-9]{4})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-        if (!value.match(phoneno)) {
+        let phone_reg = /(0|\+98)?([ ]|,|-|[()]){0,2}9[1|2|3|4]([ ]|,|-|[()]){0,2}(?:[0-9]([ ]|,|-|[()]){0,2}){8}/;
+        if (value && !value.match(phone_reg)) {
             this.errors.push("شماره تلفن معتبر نیست.");
             this.fails = true;
         }
