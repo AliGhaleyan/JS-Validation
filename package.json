@@ -1,6 +1,6 @@
 {
   "name": "js-validation-serjik",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "this is library for validation js and you can use it in vue js :)",
   "main": "index.js",
   "scripts": {
