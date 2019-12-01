@@ -74,3 +74,4 @@ Validation.validate(data, rules, labels);
 |persian alpha   |check words are persian alpha  |`persian` |  
 |english alpha   |check words are english alpha  |`english`|  
 |email           |check email format             |`email`|
+|phone           |check phone number             |`phone`|
