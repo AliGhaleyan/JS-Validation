@@ -69,7 +69,7 @@ class Validation {
             [rule, variables] = Validation.fetchVariablesOfRuleString(rules_array[i]);
 
             rule_object = new (Validation.getTypeClass(rule)['default'])();
-            if (label !== false && rule_object.hasOwnProperty('setLabel'))
+            if (label !== false && typeof rule_object.setLabel === 'function')
                 rule_object.setLabel(label);
             result = rule_object.check(value, ...variables);
 
