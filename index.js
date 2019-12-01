@@ -4,7 +4,7 @@ class Validation {
      */
     constructor() {
         this.errors = {};
-        this.fails = true;
+        this.fails = false;
         this.options = {};
 
         if (Validation.types_classes === false)
