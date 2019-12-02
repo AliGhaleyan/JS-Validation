@@ -105,30 +105,6 @@ class Validation {
     }
 
     /**
-     * action group mode validation for saved references
-     *
-     * @param vms
-     * @param values
-     * @param rules
-     * @param labels
-     * @returns {Validation}
-     */
-    groupValidateReferences(vms, values, rules, labels = {}) {
-        let result;
-        for (let i in values) {
-            let value = values[i];
-            let rule = rules[i];
-            result = Validation.validate(value, labels[i], rule, true);
-            let vm = vms[i];
-            vm.$set(vm, 'localErrors', result.errors.errors);
-            this.errors[i] = result.errors.errors;
-            if (result.fails)
-                this.fails = true;
-        }
-        return this;
-    }
-
-    /**
      * split rules of '|'
      *
      * @param string
@@ -197,38 +173,12 @@ class Validation {
     }
 
     /**
-     * save data and rule for run after in references mode
-     *
-     * @param vm
-     * @param name
-     * @param data
-     * @param rules
-     * @param label
-     */
-    static saveReference(vm, name, data, rules, label) {
-        Validation.saved_properties['values'][name] = data;
-        Validation.saved_properties['rules'][name] = rules;
-        Validation.saved_properties['labels'][name] = label;
-        Validation.saved_properties['vms'][name] = vm;
-    }
-
-    /**
      * check validation for saved values and rules in normal mode
      *
      * @returns {Validation}
      */
     static runSavedValidates() {
         return Validation.validate(Validation.saved_properties['values'], Validation.saved_properties['rules']);
-    }
-
-    /**
-     * check validation for saved values and rules in references mode
-     *
-     * @returns {Validation}
-     */
-    static runSavedReferences() {
-        let object = new Validation();
-        return object.groupValidateReferences(Validation.saved_properties['vms'], Validation.saved_properties['values'], Validation.saved_properties['rules'], Validation.saved_properties['labels']);
     }
 }
 
