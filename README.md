@@ -75,3 +75,6 @@ Validation.validate(data, rules, labels);
 |english alpha   |check words are english alpha  |`english`|  
 |email           |check email format             |`email`|
 |phone           |check phone number             |`phone`|
+|boolean         |check value is bool            |`boolean` check is true , false , 0 or 1|
+|url             |check value is current url address|`url` check is current target|
+|confirm         |check is equal with passed value|`confirm:{equal value}` you can pass variable of component|
