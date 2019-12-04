@@ -13,6 +13,7 @@ const names = [
     {name: 'url'},
     {name: 'boolean'},
     {name: 'confirm'},
+    {name: 'shaba'},
     // {name: 'rule name', route: 'file-name'}
 ];
 
