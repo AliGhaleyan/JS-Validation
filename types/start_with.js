@@ -5,9 +5,9 @@ const start_with = class StartWith {
         this.label = false;
     }
 
-    check(value,equal) {
+    check(value, equal) {
         if (value && typeof value == "string") {
-            let started = value.substr(0,1);
+            let started = value.substr(0, equal.length);
 
             if (started !== equal) {
                 this.errors.push((this.label || '') + ' باید با ' + equal + ' شروع شود.');

@@ -39,7 +39,6 @@
         <option value="$PROJECT_DIR$/types/confirm.js" />
         <option value="$PROJECT_DIR$/types.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/types/boolean.js" />
         <option value="$PROJECT_DIR$/types/email.js" />
         <option value="$PROJECT_DIR$/types/english_alpha.js" />
@@ -50,6 +49,7 @@
         <option value="$PROJECT_DIR$/types/phone.js" />
         <option value="$PROJECT_DIR$/types/string.js" />
         <option value="$PROJECT_DIR$/types/url.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -141,12 +141,12 @@
       <workItem from="1575189893964" duration="9249000" />
       <workItem from="1575267420921" duration="1074000" />
       <workItem from="1575288228907" duration="599000" />
-      <workItem from="1575441943908" duration="132000" />
+      <workItem from="1575441943908" duration="291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13999000" />
+    <option name="totallyTimeSpent" value="14158000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -429,14 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/types.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -570,6 +562,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding />
         </state>
       </provider>
