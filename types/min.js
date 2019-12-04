@@ -6,12 +6,13 @@ const min = class Min {
     }
 
     check(value, min) {
-        if (typeof value === "string") {
-            if (value.length < min) {
-                this.errors.push((this.label || '') + " باید حداقل " + min + " کاراکتر باشد.");
-                this.fails = true;
+        if (value)
+            if (typeof value === "string") {
+                if (value.length < min) {
+                    this.errors.push((this.label || '') + " باید حداقل " + min + " کاراکتر باشد.");
+                    this.fails = true;
+                }
             }
-        }
 
         return this;
     }

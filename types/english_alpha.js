@@ -7,10 +7,11 @@ const english = class English {
     }
 
     check(value) {
-        if (! /^[a-zA-Z0-9?><;,{}[\]\-_+=!@#$%\^&*|']*$/.test(value)) {
-            this.errors.push((this.label || '') + ' باید حروف لاتین باشد.');
-            this.fails = true;
-        }
+        if (value)
+            if (!/^[a-zA-Z0-9?><;,{}[\]\-_+=!@#$%\^&*|']*$/.test(value)) {
+                this.errors.push((this.label || '') + ' باید حروف لاتین باشد.');
+                this.fails = true;
+            }
 
         return this;
     }

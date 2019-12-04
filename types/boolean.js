@@ -6,13 +6,14 @@ const boolean = class Boolean {
     }
 
     check(value) {
-        if (typeof value !== 'boolean') {
-            value = Number(value);
-            if (isNaN(value))
-                this.setError();
-            else if (value !== 1 && value !== 0)
-                this.setError();
-        }
+        if (value)
+            if (typeof value !== 'boolean') {
+                value = Number(value);
+                if (isNaN(value))
+                    this.setError();
+                else if (value !== 1 && value !== 0)
+                    this.setError();
+            }
 
         return this;
     }

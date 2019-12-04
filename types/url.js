@@ -5,10 +5,11 @@ const url = class Url {
     }
 
     check(value) {
-        if ( !value.match(/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/) ) {
-            this.errors.push('آدرس اینترنتی معتبر نیست.');
-            this.fails = true;
-        }
+        if (value)
+            if (!value.match(/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/)) {
+                this.errors.push('آدرس اینترنتی معتبر نیست.');
+                this.fails = true;
+            }
 
         return this;
     }

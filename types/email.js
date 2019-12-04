@@ -6,10 +6,11 @@ const email = class Email {
     }
 
     check(value) {
-        if (!/\S+@\S+\.\S+/.test(value)) {
-            this.errors.push(" فرمت ایمیل نادرست است.");
-            this.fails = true;
-        }
+        if (value)
+            if (!/\S+@\S+\.\S+/.test(value)) {
+                this.errors.push(" فرمت ایمیل نادرست است.");
+                this.fails = true;
+            }
 
         return this;
     }

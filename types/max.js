@@ -6,12 +6,13 @@ const max = class Max {
     }
 
     check(value, max) {
-        if (typeof value === "string") {
-            if (value.length > max) {
-                this.errors.push((this.label || '') + " باید حداکثر " + max + " کاراکتر باشد.");
-                this.fails = true;
+        if (value)
+            if (typeof value === "string") {
+                if (value.length > max) {
+                    this.errors.push((this.label || '') + " باید حداکثر " + max + " کاراکتر باشد.");
+                    this.fails = true;
+                }
             }
-        }
 
         return this;
     }

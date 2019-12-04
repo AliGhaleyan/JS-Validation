@@ -6,10 +6,11 @@ const integer = class Integer {
     }
 
     check(value) {
-        if (isNaN(Number(value))) {
-            this.errors.push((this.label || '') + " باید از نوع داده عددی باشد.");
-            this.fails = true;
-        }
+        if (value)
+            if (isNaN(Number(value))) {
+                this.errors.push((this.label || '') + " باید از نوع داده عددی باشد.");
+                this.fails = true;
+            }
 
         return this;
     }

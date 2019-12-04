@@ -6,10 +6,11 @@ const string = class String {
     }
 
     check(value) {
-        if (typeof value !== "string") {
-            this.errors.push((this.label || '') + " باید از نوع داده رشته باشد.");
-            this.fails = true;
-        }
+        if (value)
+            if (typeof value !== "string") {
+                this.errors.push((this.label || '') + " باید از نوع داده رشته باشد.");
+                this.fails = true;
+            }
 
         return this;
     }
