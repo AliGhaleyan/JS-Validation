@@ -6,11 +6,13 @@ const start_with = class StartWith {
     }
 
     check(value,equal) {
-        let started = value.substr(0,1);
+        if (value && typeof value == "string") {
+            let started = value.substr(0,1);
 
-        if (started !== equal) {
-            this.errors.push((this.label || '') + ' باید با ' + equal + ' شروع شود.');
-            this.fails = true;
+            if (started !== equal) {
+                this.errors.push((this.label || '') + ' باید با ' + equal + ' شروع شود.');
+                this.fails = true;
+            }
         }
 
         return this;
