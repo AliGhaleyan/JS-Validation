@@ -14,6 +14,7 @@ const names = [
     {name: 'boolean'},
     {name: 'confirm'},
     {name: 'shaba'},
+    {name: 'persian_national_code', route: 'persian-national-code'},
     // {name: 'rule name', route: 'file-name'}
 ];
 
