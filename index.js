@@ -92,7 +92,7 @@ class Validation {
      */
     groupValidate(values, rules, labels = false) {
         let result;
-        for (let i in values) {
+        for (let i in rules) {
             let value = values[i];
             let rule = rules[i];
             let label = labels ? labels[i] : false;
