@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7421545-436a-475d-a68d-7d53b7d072e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/types/persian-national-code.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types.js" afterPath="$PROJECT_DIR$/types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/phone.js" afterPath="$PROJECT_DIR$/types/phone.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,18 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,12 +38,12 @@
         <option value="$PROJECT_DIR$/types/persian_alpha.js" />
         <option value="$PROJECT_DIR$/types/string.js" />
         <option value="$PROJECT_DIR$/types/url.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/types/email.js" />
         <option value="$PROJECT_DIR$/types/shaba.js" />
         <option value="$PROJECT_DIR$/../vue-validation/package.json" />
         <option value="$PROJECT_DIR$/types.js" />
         <option value="$PROJECT_DIR$/types/phone.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -104,11 +90,6 @@
             <path>
               <item name="validation" type="b2602c69:ProjectViewProjectNode" />
               <item name="validation" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="validation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="validation" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="types" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -159,12 +140,12 @@
       <workItem from="1575449969855" duration="287000" />
       <workItem from="1575697547788" duration="195000" />
       <workItem from="1575959247197" duration="2085000" />
-      <workItem from="1576050317788" duration="520000" />
+      <workItem from="1576050317788" duration="1196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17761000" />
+    <option name="totallyTimeSpent" value="18437000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -177,7 +158,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -186,7 +166,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -230,7 +210,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-          <folding />
+          <folding>
+            <marker date="1576050981805" expanded="true" signature="0:611" ph="{&quot;name&quot;: &quot;js-validation-serjik&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="179:242" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="260:350" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="366:416" ph="[...]" />
+            <marker date="1576050981805" expanded="true" signature="470:540" ph="{&quot;url&quot;: &quot;https://github.com/AliGhaleyan/JS-Validation/issues&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -312,7 +298,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
+          <folding>
+            <marker date="1576050981805" expanded="true" signature="0:611" ph="{&quot;name&quot;: &quot;js-validation-serjik&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="179:242" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="260:350" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="366:416" ph="[...]" />
+            <marker date="1576050981805" expanded="true" signature="470:540" ph="{&quot;url&quot;: &quot;https://github.com/AliGhaleyan/JS-Validation/issues&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -320,7 +312,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1576050981805" expanded="true" signature="0:611" ph="{&quot;name&quot;: &quot;js-validation-serjik&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="179:242" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="260:350" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="366:416" ph="[...]" />
+            <marker date="1576050981805" expanded="true" signature="470:540" ph="{&quot;url&quot;: &quot;https://github.com/AliGhaleyan/JS-Validation/issues&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -395,7 +393,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-          <folding />
+          <folding>
+            <marker date="1576050981805" expanded="true" signature="0:611" ph="{&quot;name&quot;: &quot;js-validation-serjik&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="179:242" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="260:350" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="366:416" ph="[...]" />
+            <marker date="1576050981805" expanded="true" signature="470:540" ph="{&quot;url&quot;: &quot;https://github.com/AliGhaleyan/JS-Validation/issues&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -519,6 +523,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="586">
           <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -564,9 +569,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding>
+            <marker date="1576050981805" expanded="true" signature="0:611" ph="{&quot;name&quot;: &quot;js-validation-serjik&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="179:242" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="260:350" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1576050981805" expanded="true" signature="366:416" ph="[...]" />
+            <marker date="1576050981805" expanded="true" signature="470:540" ph="{&quot;url&quot;: &quot;https://github.com/AliGhaleyan/JS-Validation/issues&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
