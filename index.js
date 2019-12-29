@@ -96,6 +96,10 @@ class Validation {
             let value = values[i];
             let rule = rules[i];
             let label = labels ? labels[i] : false;
+
+            if (!rule)
+                continue;
+
             result = Validation.validate(value, rule, label, true);
             if (result.fails) {
                 this.fails = true;
