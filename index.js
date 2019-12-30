@@ -38,7 +38,7 @@ class Validation {
      * @param single
      * @returns {Validation}
      */
-    static validate(values, rules, labels = false, single = false,) {
+    static validate(values, rules, labels = false, single = false, ) {
         let object = new Validation();
 
         if (single)
@@ -67,6 +67,9 @@ class Validation {
         for (let i = 0; i < rules_array.length; i++) {
             let rule, rule_object, variables;
             [rule, variables] = Validation.fetchVariablesOfRuleString(rules_array[i]);
+
+            if (!rule)
+                continue;
 
             rule_object = new (Validation.getTypeClass(rule)['default'])();
             if (label !== false && typeof rule_object.setLabel === 'function')
@@ -191,9 +194,9 @@ Validation.types_classes = false;
 Validation.loaded_types = {};
 Validation.saved_properties = {
     values: {},
-    rules : {},
+    rules: {},
     labels: {},
-    vms   : {},
+    vms: {},
 };
 
 export default Validation;
