@@ -8,7 +8,7 @@ const shaba = class Shaba {
     check(value) {
         //  check value
         if (value)
-            if (!/^IR\d{24}$/.test(value)) {
+            if (!/^\d{24}$/.test(value)) {
                 this.errors.push(" شماره شبا نادرست است.");
                 this.fails = true;
             }
