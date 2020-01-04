@@ -119,6 +119,8 @@ class Validation {
      * @returns {*|{type, default}}
      */
     static fetchRulesOfString(string) {
+        if (!string || string.trim() == '')
+            return [];
         return string.split('|');
     }
 
