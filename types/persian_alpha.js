@@ -7,7 +7,7 @@ const persian = class Persian {
 
     check(value) {
         if (value)
-            if (!/^[\u0600-\u06FF\s]+$/.test(value)) {
+            if (!/^[\u0600-\u06FF0-9\s]+$/.test(value)) {
                 this.errors.push((this.label || '') + ' باید حروف فارسی باشد');
                 this.fails = true;
             }
