@@ -5,12 +5,21 @@ const persian = class Persian {
         this.label = false;
     }
 
-    check(value) {
-        if (value)
-            if (!/^[\u0600-\u06FF0-9\s]+$/.test(value)) {
+    check(value, withNumbers = false) {
+        let reg = '';
+
+        if (value) {
+            if (withNumbers != false) {
+               reg = /^[\u0600-\u06FF0-9\s]+$/;
+            } else {
+                reg = /^[\u0600-\u06FF\s]+$/;
+            }
+
+            if (!reg.test(value)) {
                 this.errors.push((this.label || '') + ' باید حروف فارسی باشد');
                 this.fails = true;
             }
+        }
 
         return this;
     }
