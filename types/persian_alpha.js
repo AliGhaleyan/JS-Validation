@@ -10,9 +10,9 @@ const persian = class Persian {
 
         if (value) {
             if (withNumbers != false) {
-               reg = /^[\u0600-\u06FF0-9\s]+$/;
+               reg = /^[\u0600-\u06FF0-9\-\s]+$/;
             } else {
-                reg = /^[\u0600-\u06FF\s]+$/;
+                reg = /^[\u0600-\u06FF\-\s]+$/;
             }
 
             if (!reg.test(value)) {
