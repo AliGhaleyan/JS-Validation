@@ -5,7 +5,7 @@ const setLabel = class Phone {
     }
 
     check(value) {
-        let phone_reg = /(0|\+98)?([ ]|,|-|[()]){0,2}9[1|2|3|4]([ ]|,|-|[()]){0,2}(?:[0-9]([ ]|,|-|[()]){0,2}){8}$/;
+        let phone_reg = /(0|\+98)?([ ]|,|-|[()]){0,2}9[1|2|3|4|9|0]([ ]|,|-|[()]){0,2}(?:[0-9]([ ]|,|-|[()]){0,2}){8}$/;
         if (value && !phone_reg.test(value)) {
             this.errors.push("شماره تلفن معتبر نیست.");
             this.fails = true;
