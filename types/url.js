@@ -1,4 +1,4 @@
-const url = class Url {
+﻿const url = class Url {
     constructor() {
         this.errors = [];
         this.fails = false;
@@ -6,7 +6,7 @@ const url = class Url {
 
     check(value) {
         if (value)
-            if (!value.match(/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/)) {
+            if (!value.match(/^http(s)?:\/\/?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/)) {
                 this.errors.push('آدرس اینترنتی معتبر نیست.');
                 this.fails = true;
             }
